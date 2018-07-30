@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
-  root :to => 'peges#index'
+Rails.application.routes.draw do  
+  root :to => 'pages#index'
+
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
+  resources :users, only: [:show]
 end

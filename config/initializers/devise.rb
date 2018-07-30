@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -8,11 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'bf1e2bc8e9c997a141792f40f271ab49c8f5602c5cc0fb3e13f544d72f169bc00d200c3ad77bc876a4d44f4fc4b9a0b9d0887c6e5d6f4c5778967e1a8b9451bb'
-  
-  # ==> Controller configuration
-  # Configure the parent class to the devise controllers.
-  # config.parent_controller = 'DeviseController'
+  # config.secret_key = '4e5dfa2cdc8753faaece11b146ed731d038eb0946e653f4d850aea85f537108cc91359b9fee377e5485b36e6f514c399399b3f8c67ef18804e952815277ab4e4'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -96,12 +90,6 @@ Devise.setup do |config|
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
 
-  # When false, Devise will not attempt to reload routes on eager load.
-  # This can reduce the time taken to boot the app but if your application
-  # requires the Devise mappings to be loaded during boot time the application
-  # won't boot properly.
-  # config.reload_routes = true
-
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 11. If
   # using other algorithms, it sets how many times you want the password to be hashed.
@@ -114,12 +102,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '9d18dcba62c529a3e002913d69c6b888082c36015d484d19a4f589b48af288c57bec3c71fde91e43492e0bb7b44cc1f993676d5603437a00915c9108573ade16'
+  # config.pepper = '0b247061cd3993a9b1c517d5c3c715a3a47f2f1d4c98fa4779fe9d9e7bf9303a0ebbc7d605bdc85eb2ebe9aefe77836a83c21f6432826ac8de0bdc4abac81106'
 
-  # Send a notification to the original email when the user's email is changed.
-  # config.send_email_changed_notification = false
-
-  # Send a notification email when the user's password is changed.
+  # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
@@ -281,6 +266,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.omniauth :facebook, "1813286838752880", "9bf939cd403c1f0e21ef231a45e1a965", scope: 'email', info_fields: 'email,name'
-
 
 end
